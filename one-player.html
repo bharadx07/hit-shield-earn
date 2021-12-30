@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/48204ae0-66b8-414e-b6a4-74c3af605dc6%2FLogo-Game.PNG?v=1599582022030"
+    />
+
+    <title>Hit-Shield-Earn</title>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="/script.js" defer></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="main-title">
+      <h1 class="glow-box title">Hit Shield Earn</h1>
+      <p>An action packed battle game.</p>
+    </header>
+
+    <div class="player-titles">
+      <p>
+        Player 1
+      </p>
+      <p>
+        Computer
+      </p>
+    </div>
+
+    <div class="money" style="">
+      <div>
+        $<span id="player-1-cash">850</span>
+        
+      </div>
+      
+      <div>
+         $<span id="bot-cash">850</span>
+        
+      </div>
+     
+    </div>
+
+    <div class="lives">
+      <div>❤ <span id="player-1-lives">100</span></div>
+      <div>❤ <span id="bot-lives">100</span></div>
+    </div>
+    
+    
+    <div class = "whose-turn">
+      <span id = "turns">Game Beginning..</span>
+    </div>
+    <br>
+    
+    <div class = "chose-category" id = "choose">
+      <button class = "index-button" onclick = "attack_button()">
+        Attacks
+      </button>
+      <button class = "index-button" onclick = "defence_button()">
+        Defence
+      </button>
+      
+      <button class = "index-button" onclick = "income_button()">
+        Income
+      </button>
+      
+     
+    </div>
+    
+    <br>
+    
+    
+    <div class = "attacks" id= "attack">
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "mini_shotgun()">
+        Cost: $20
+      </button>
+        
+      Mini Shotgun: Takes away 1 life.
+        
+      </div>
+      
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "shotgun()">
+        Cost: $50
+      </button >
+        
+      Shotgun: Takes away 5 lifes.
+        
+      </div>
+      
+      
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "firing_shotgun()">
+        Cost: $100
+      </button>
+        
+       Fast Firing Shotgun: Takes away 10 lifes.
+        
+      </div>
+      
+      
+            
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "semi_auto_rifle()">
+        Cost: $500
+      </button>
+        
+       Semi Auto Rifle: Takes away 50 lifes.
+        
+      </div>
+      
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "full_auto_rifle()">
+        Cost: $1,500
+      </button>
+        
+       Full Auto Rifle: Takes away 100 lifes.
+        
+      </div>
+      
+    
+     
+     
+     
+                                                                                  
+    </div>
+    
+    
+    <div class = "defence" id = "defend">
+        <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "mini_healer()">
+        Cost: $20
+      </button >
+        
+      Mini Healer: Adds 1 life.
+        
+      </div>
+      
+      <div class = "upgrade-wrap">
+      <button  class = "index-button" onclick = "improved_healer()">
+        Cost: $50
+      </button>
+        
+      Improved Healer: Adds 5 lifes.
+        
+      </div>
+      
+      
+      <div class = "upgrade-wrap">
+      <button  class = "index-button" onclick = "epic_healer()">
+        Cost: $100
+      </button>
+        
+       Epic Healer: Adds 10 lifes.
+        
+      </div>
+      
+      
+            
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "pro_healer()">
+        Cost: $500
+      </button>
+        
+       Pro Healer: Adds 50 lifes.
+        
+      </div>
+      
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "master_healer()">
+        Cost: $1,500
+      </button>
+        
+       Master Healer: Adds 100 lifes.
+        
+      </div>
+      
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "L1shield()">
+        Cost: $100
+      </button >
+        
+       Level One Shield: All attacks blocked for the next 
+        
+      </div>
+      
+      
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "L2shield()">
+        Cost: $200
+      </button>
+        
+       Level Two Shield: All attacks blocked for the next 2 rounds
+        
+      </div>
+       
+    </div>
+    
+    
+        <div class = "income" id = "incomes">
+        <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "mini_boost()">
+        Cost: $20
+      </button>
+        
+      Mini Boost: Adds $1 to income.
+        
+      </div>
+      
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "improved_boost()">
+        Cost: $50
+      </button>
+        
+      Improved Boost: Adds $5 to income.
+        
+      </div>
+      
+      
+      <div class = "upgrade-wrap" onclick = "epic_boost()">
+      <button class = "index-button">
+        Cost: $100
+      </button>
+        
+       Epic Boost: Adds $10 to income.
+        
+      </div>
+      
+      
+            
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "pro_boost()" >
+        Cost: $500
+      </button>
+        
+       Pro Boost: Adds $50 to income.
+        
+      </div>
+      
+      <div class = "upgrade-wrap">
+      <button class = "index-button" onclick = "master_boost()">
+        Cost: $1,500
+      </button>
+        
+       Master Boost: Adds $100 to income.
+        
+      </div>
+      
+ 
+       
+    </div>
+    
+    <br>
+    <br>
+    
+    <div class = "who-won" id = "win">
+      
+    </div>
+    
+    <br>
+    <br>
+    
+    <div class = "reset">
+      <button class = "index-button"  onclick = "reset_game()">
+        Reset Game
+      </button>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,233 @@
+:root {
+    --primary-color: #3498DB;
+    --secondary-color: #5499C7;
+    --bg-primary: #000;
+    --bg-secondary: #222;
+  }
+  
+  
+  body {
+    font-size: 20px;
+    font-family: 'Exo 2', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    background: var(--bg-primary);
+    color: var(--primary-color);
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--background-color);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+  }
+  
+  body::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    position: fixed;
+    background-color: var(--secondary-color);
+  }
+  .navbar-list {
+    flex-direction: row;
+  }
+  .nav-link {
+    justify-content: center;
+  }
+  .navbar {
+    position: fixed;
+    background-color: var(--secondary-color);
+    transition: 0.2s ease;
+  }
+  .navbar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  .nav-item {
+    padding: 1rem 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 0.5s;
+  }
+  .nav-item a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .nav-item a:hover {
+    letter-spacing: 0.1rem;
+  }
+  
+  /* Main Title */
+  .main-title {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  /* Main Buttons */
+  .index-button-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  .index-button-container a {cursor: default}
+  .index-button {
+    margin: 0 1rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .index-button:hover {color: var(--secondary-color)}
+  .index-button:focus {
+    outline: none
+  }
+  
+  /* Content */
+  .title {
+    color: white;
+  }
+  .content-container {
+    text-align: center;
+    max-width: 50%;
+    margin: auto;
+    background: bg(--bg-primary);
+  }
+  .glow-box {
+    position: relative;
+    display: inline;
+    
+    
+    
+  }
+  .glow-box:before,
+  .glow-box:after {
+    content:"";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(45deg, #fb0094, #0000f4, #fb0094);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+  }
+  .glow-box:after {
+    filter: blur(10px);
+  }
+  @keyframes animate {
+    0%
+    {
+      background-position: 0 0;
+    }
+    50%
+    {
+      background-position: 400% 0;
+    }
+    100%
+    {
+      background-position: 0 0;
+    }
+  }
+  
+  .title-updates {
+    margin-top: 1rem;
+    background: linear-gradient(45deg, #0000f4, #000, #0000f4);
+  }
+  
+  
+  
+  .image-logo-wrap {
+    text-align: center;
+    padding-top: 5%;
+  }
+  
+  
+  .mid-footer {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 3%;
+  }
+  
+  
+  .thanks {
+    padding-top: 3%;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .player-titles {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%
+    
+  }
+  
+  .money {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%
+    
+  }
+  
+  .lives {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%
+    
+  }
+  
+  
+  
+  .whose-turn {
+    text-align: center;
+    padding-top: 2%; 
+    font-size: 30px;
+  }
+  
+  
+  .chose-category {
+    text-align: center;
+  }
+  
+  .attacks, .defence, .income {
+    padding-left: 5%;
+  }
+  
+  button {
+    
+  }
+  
+  .reset {
+    text-align: center;
+    padding-bottom: 4%;
+  }
+  
+  
+  .upgrade-wrap {
+    padding-top: 3%;
+  }
